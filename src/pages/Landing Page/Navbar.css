@@ -1,23 +1,34 @@
-/* General Styling */
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Navbar Container */
-  .navbar {
-    width: 100%;
-    background-color: green; /* Dark background */
-    color: white;
-    padding: 20px 20px;
-    padding-left: 50px;
-    padding-right: 100px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    position: sticky;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+/* Navbar Default */
+.navbar {
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensures it's above other content */
+    background: #0d0d0d; /* Semi-transparent background */
+    color: white;
+    padding: 1rem;
+    transition: background-color 0.3s ease, opacity 0.3s ease; /* Add opacity transition */
+    opacity: 1; /* Default opacity */
   }
   
+  /* Navbar Scrolled */
+  .navbar.scrolled {
+    background-color: transparent; /* Transparent background */
+    box-shadow: none; /* Optional: Remove shadow on scroll */
+    opacity: 0.8; /* Make it slightly transparent on scroll for a smooth effect */
+  }
+  
+  .nav-link{
+    font-family: "Poppins", serif;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
   .navbar-container {
     display: flex;
     align-items: center;
@@ -38,6 +49,7 @@ body {
   }
   
   .navbar-links a {
+    font-family: "Poppins", serif;
     text-decoration: none;
     color: white;
     font-weight: bold;

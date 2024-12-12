@@ -1,13 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './pages/Landing Page/Navbar';
 import LandingPage from './pages/Landing Page/LandingPage';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
+      {/* Navbar is outside Routes so it renders on all pages */}
       <Navbar />
-      <LandingPage />
-    </div>
+      <Routes>
+        {/* Define your routes here */}
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
+    </Router>
   );
 }
 
