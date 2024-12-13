@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './components/Button';
+import Footer from './components/Footer';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -26,15 +27,17 @@ const LandingPage = () => {
         <h2 className="section-title">Featured Games</h2>
         <div className="games-list">
           <div className="game-card">
-          
+          Comming Soon
           </div>
           <div className="game-card">
+          Comming Soon
           </div>
           <div className="game-card">
-           
+          Comming Soon
           </div>
         </div>
       </section>
+      <Footer/>
     </div>
   );
 };
