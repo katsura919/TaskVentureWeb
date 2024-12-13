@@ -4,7 +4,9 @@ import styled from 'styled-components';
 const Button = () => {
   return (
     <StyledWrapper>
-      <button className="comic-button">Download Now!</button>
+      <a href="https://drive.google.com/uc?export=download&id=1iVSvBBiruBpBAx67YIQD1k-KJ2cEli9_" download>
+        <button className="comic-button">Download Now!</button>
+      </a>
     </StyledWrapper>
   );
 }
