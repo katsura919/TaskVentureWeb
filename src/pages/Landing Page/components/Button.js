@@ -4,46 +4,134 @@ import styled from 'styled-components';
 const Button = () => {
   return (
     <StyledWrapper>
-      <button className="btn">
-        DOWNLOAD
+      <button className="button">
+        <span className="button_lg">
+          <span className="button_sl" />
+          <span className="button_text">Download Now</span>
+        </span>
       </button>
     </StyledWrapper>
   );
 }
 
 const StyledWrapper = styled.div`
-  .btn {
-    padding: 0.8em 2em 0.8em 2.5em;
-    font-size: 15px;
+  .button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    color: #0f1923;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
     font-weight: bold;
-    border-radius: 15px;
-    color: #f6fff6;
-    letter-spacing: 0.3em;
-    text-shadow: -2px 2px 5px #33fd30;
-    background-color: transparent;
-    border: 2px solid #bbfeb1;
-    box-shadow: 0 0 0px 1px #42f112,
-      0 0 10px 2px #33fd30,
-      inset 0 0 0px 1px #42f112,
-      inset 0 0 10px 2px #33fd30;
-    transition: 100ms;
+    font-size: 14px;
+    transition: all .15s ease;
   }
 
-  .btn:hover {
-    box-shadow: 0 0 0px 1px #42f112,
-      0 0 10px 2px #33fd30,
-      inset 0 0 0px 1px #42f112,
-      inset 0 0 30px 2px #33fd30;
-    text-shadow: 0 0 10px #33fd30;
-    transform: translateY(-5px);
+  .button::before,
+  .button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid #7D8082;
+    transition: all .15s ease;
   }
 
-  .btn:active {
-    box-shadow: 0 0 0px 1px #42f112,
-      0 0 25px 2px #33fd30,
-      inset 0 0 0px 1px #42f112,
-      inset 0 0 30px 2px #33fd30;
-    transform: translateY(1px);
+  .button::before {
+    top: 0;
+    border-bottom-width: 0;
+  }
+
+  .button::after {
+    bottom: 0;
+    border-top-width: 0;
+  }
+
+  .button:active,
+  .button:focus {
+    outline: none;
+  }
+
+  .button:active::before,
+  .button:active::after {
+    right: 3px;
+    left: 3px;
+  }
+
+  .button:active::before {
+    top: 3px;
+  }
+
+  .button:active::after {
+    bottom: 3px;
+  }
+
+  .button_lg {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #0f1923;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 1px transparent;
+  }
+
+  .button_lg::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #0f1923;
+  }
+
+  .button_lg::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #0f1923;
+    transition: all .2s ease;
+  }
+
+  .button_sl {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: -8px;
+    width: 0;
+    background-color: #ff4655;
+    transform: skew(-15deg);
+    transition: all .2s ease;
+  }
+
+  .button_text {
+    position: relative;
+  }
+
+  .button:hover {
+    color: #0f1923;
+  }
+
+  .button:hover .button_sl {
+    width: calc(100% + 15px);
+  }
+
+  .button:hover .button_lg::after {
+    background-color: #fff;
   }`;
 
 export default Button;

@@ -1,139 +1,152 @@
 @import url('https://fonts.googleapis.com/css2?family=Agu+Display&display=swap');
 
-/* General Page Styling */
+/* Landing Page */
 .landing-page {
-    font-family: 'Arial', sans-serif;
-    color: white;
-    background-color: #0d0d0d;
+  font-family: 'Arial', sans-serif;
+  background-color: #0d0d0d;
+}
 
-  }
-  
-  /* Hero Section */
+/* Hero Section */
+.hero-section {
+  position: relative;
+  min-height: 90vh;
+  background: url('../../assets/LandingPageCover.png') center/cover no-repeat; /* Replace with your image path */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligns content to the left */
+  padding: 0 5%; /* Adds space on both sides for better layout */
+  color: white;
+}
+
+/* Overlay */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Adjust the alpha value for darkness */
+  z-index: 1;
+}
+
+/* Hero Content */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Keeps content above the overlay */
+  z-index: 2;
+  max-width: 600px; /* Limits the width for readability */
+
+}
+
+.game-title {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  font-family: "Agu Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 0;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow for depth */
+}
+
+.tagline {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: #d1d1d1;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* Button Container */
+.btn-container {
+  margin-top: 2rem;
+}
+
+/* Featured Games Section */
+.featured-games {
+  padding: 2rem;
+  background-color: #f4f4f4; /* Optional section background */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.games-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.game-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  margin: 0 0.5rem;
+  min-width: 200px; /* Ensures proper sizing on small screens */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .hero-section {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    text-align: center;
-    background-image: url('../../assets/LandingPageCover.png'); 
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    color: white;
+    justify-content: center; /* Centers content on smaller screens */
+    padding: 2rem; /* Reduces padding for smaller devices */
   }
-  
-  .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2); /* Dark overlay */
-    z-index: 1;
-  }
-  
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 20px;
-    justify-content: center;
 
+  .hero-content {
+    text-align: center; /* Centers text on smaller screens */
+    max-width: 90%; /* Adjust width for smaller devices */
   }
-  .btn-container{
-    display: flex;
-    justify-content: center;
-  }
+
   .game-title {
-    font-family: "Agu Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-variation-settings:
-      "MORF" 0;
-    font-size: 100px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow for depth */
+    font-size: 2.5rem; /* Adjusts title size for smaller screens */
   }
-  
+
   .tagline {
-    font-family: "Poppins", serif;
-    font-size: 1.2rem;
-    font-style: italic;
+    font-size: 1.2rem; /* Adjusts tagline size */
   }
-  
+
   .subtitle {
-    font-family: "Poppins", serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 30px;
+    font-size: 1rem; /* Adjusts subtitle size */
   }
-  
-  .cta-button {
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 10px 20px;
-    color: #ffffff;
-    background: linear-gradient(90deg, #007bff, #0056b3); /* Gradient button */
-    border: none;
-    border-radius: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-  }
-  
-  .cta-button:hover {
-    background: linear-gradient(90deg, #0056b3, #003f7f);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
-  }
-  
-  
-  .hero-image img {
-    max-width: 500px;
-    border-radius: 10px;
-  }
-  
-  /* Featured Games Section */
-  .featured-games {
-    margin-top: 50px;
-  }
-  
-  .section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
+
   .games-list {
-    display: flex;
-    gap: 20px;
+    flex-direction: column; /* Stacks game cards vertically */
   }
-  
-  .game-card {
-    flex: 1;
-    text-align: center;
-    background-color: #1e1e1e;
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-   
-  }
-  
-  .game-card img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .game-card h1 {
-    font-size: 2.2rem;
-  }
-  
-  .game-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  }
-  
+}
+
+
+.featured-games{
+  background-color: #0d0d0d;
+  color: white;
+}
+
+.section-title{
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.game-card{
+  flex: 1;
+  text-align: center;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

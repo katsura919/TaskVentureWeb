@@ -8,18 +8,17 @@ const LandingPage = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
-            <h1 className="game-title">TaskVenture</h1>
-            <p className="tagline">"Forge your destiny, one task at a time."</p>
-            <p className="subtitle">
-            Embark on your daily quest. Turn productivity into an adventure with TaskVenture.
-            </p>
-            <div className='btn-container'>
-                <Button/>
-            </div>
-                
-        
+          <h1 className="game-title">TASKVENTURE</h1>
+          <p className="tagline">"Forge your destiny, one task at a time."</p>
+          <p className="subtitle">
+            Embark on your daily quest. Turn productivity into an adventure with TaskVenture. Take on challenges, conquer tasks, and level up!
+          </p>
+          <div className="btn-container">
+            <Button/>
+          </div>
         </div>
-       </section>
+      </section>
+
 
 
       {/* Featured Games Section */}
@@ -30,7 +29,6 @@ const LandingPage = () => {
           
           </div>
           <div className="game-card">
-              <h1>NIGGA</h1>
           </div>
           <div className="game-card">
            

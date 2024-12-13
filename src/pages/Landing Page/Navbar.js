@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logo from '../../assets/logo.png'
 import './Navbar.css'; // Ensure this matches your CSS file path
 
 function Navbar() {
@@ -20,12 +21,16 @@ function Navbar() {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-logo">
-        <a href="#home" className="nav-link">ADVENTURE GAMES</a>
+          <img
+            src= {logo}
+            alt="Business Illustration"
+            className="logo"
+          />
         </div>
         <div className="navbar-links">
-          <a href="#home" className="nav-link">Home</a>
-          <a href="#about" className="nav-link">About</a>
-          <a href="#contact" className="nav-link">Contact</a>
+          <a href="#home" className="nav-link">HOME</a>
+          <a href="#about" className="nav-link">ABOUT</a>
+          <a href="#contact" className="nav-link">CONTACT</a>
         </div>
         <div className="menu-icon">
           <div className="burger"></div>
