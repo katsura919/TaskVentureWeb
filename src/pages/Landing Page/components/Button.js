@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Button = () => {
   return (
     <StyledWrapper>
-      <a href="https://www.dropbox.com/scl/fi/cqiao4eoz4wuigpg1k0hn/TaskVenture.apk?rlkey=u7x53ox3i4vfg5o18lxax0o76&st=i1ck6c8t&dl=1" download>
+      <a href="https://dl.dropboxusercontent.com/scl/fi/cqiao4eoz4wuigpg1k0hn/TaskVenture.apk?rlkey=u7x53ox3i4vfg5o18lxax0o76&st=2k47lj4f&dl=0" download>
         <button className="comic-button">Download Now!</button>
       </a>
     </StyledWrapper>
