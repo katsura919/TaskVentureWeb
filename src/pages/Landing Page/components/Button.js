@@ -4,134 +4,39 @@ import styled from 'styled-components';
 const Button = () => {
   return (
     <StyledWrapper>
-      <button className="button">
-        <span className="button_lg">
-          <span className="button_sl" />
-          <span className="button_text">Download Now</span>
-        </span>
-      </button>
+      <button className="comic-button">Download Now!</button>
     </StyledWrapper>
   );
 }
 
 const StyledWrapper = styled.div`
-  .button {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    border: none;
-    background: none;
-    color: #0f1923;
-    cursor: pointer;
-    position: relative;
-    padding: 8px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 14px;
-    transition: all .15s ease;
-  }
-
-  .button::before,
-  .button::after {
-    content: '';
-    display: block;
-    position: absolute;
-    right: 0;
-    left: 0;
-    height: calc(50% - 5px);
-    border: 1px solid #7D8082;
-    transition: all .15s ease;
-  }
-
-  .button::before {
-    top: 0;
-    border-bottom-width: 0;
-  }
-
-  .button::after {
-    bottom: 0;
-    border-top-width: 0;
-  }
-
-  .button:active,
-  .button:focus {
-    outline: none;
-  }
-
-  .button:active::before,
-  .button:active::after {
-    right: 3px;
-    left: 3px;
-  }
-
-  .button:active::before {
-    top: 3px;
-  }
-
-  .button:active::after {
-    bottom: 3px;
-  }
-
-  .button_lg {
-    position: relative;
-    display: block;
+  .comic-button {
+    display: inline-block;
     padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
     color: #fff;
-    background-color: #0f1923;
-    overflow: hidden;
-    box-shadow: inset 0px 0px 0px 1px transparent;
+    background-color: #ff5252;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
   }
 
-  .button_lg::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 2px;
-    background-color: #0f1923;
-  }
-
-  .button_lg::after {
-    content: '';
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 4px;
-    height: 4px;
-    background-color: #0f1923;
-    transition: all .2s ease;
-  }
-
-  .button_sl {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: -1px;
-    left: -8px;
-    width: 0;
-    background-color: #ff4655;
-    transform: skew(-15deg);
-    transition: all .2s ease;
-  }
-
-  .button_text {
-    position: relative;
-  }
-
-  .button:hover {
-    color: #0f1923;
-  }
-
-  .button:hover .button_sl {
-    width: calc(100% + 15px);
-  }
-
-  .button:hover .button_lg::after {
+  .comic-button:hover {
     background-color: #fff;
+    color: #ff5252;
+    border: 2px solid #ff5252;
+    box-shadow: 5px 5px 0px #ff5252;
+  }
+
+  .comic-button:active {
+    background-color: #fcf414;
+    box-shadow: none;
+    transform: translateY(4px);
   }`;
 
 export default Button;
