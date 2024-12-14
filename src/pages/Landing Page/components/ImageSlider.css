@@ -118,7 +118,7 @@
   /* Mobile screens */
   @media (max-width: 480px) {
     .image-row-slider{
-        width: 10%;
+        width: 70%;
     }
     .image-row-slider__image {
       width: 150px; /* Further reduce image width for small screens */
