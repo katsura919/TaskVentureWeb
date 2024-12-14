@@ -9,7 +9,7 @@
 /* Hero Section */
 .hero-section {
   position: relative;
-  min-height: 90vh;
+  min-height: 70vh;
   background: url('../../assets/LandingPageCover.png') center/cover no-repeat; /* Replace with your image path */
   display: flex;
   align-items: center;
@@ -43,7 +43,7 @@
 }
 
 .game-title {
-  font-size: 20px;
+  font-size: 100px;
   margin-bottom: 10px;
   font-family: "Agu Display", serif;
   font-optical-sizing: auto;

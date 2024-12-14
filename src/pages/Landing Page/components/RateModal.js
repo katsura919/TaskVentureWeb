@@ -3,6 +3,7 @@ import axios from "axios";
 import "./RateModal.css";
 
 const RateModal = ({ isOpen, onClose }) => {
+   const apiBaseURL = `https://moodyblues-server.onrender.com`;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,7 +27,7 @@ const RateModal = ({ isOpen, onClose }) => {
     e.preventDefault();
     
     try {
-      const response = await axios.post("http://localhost:5000/api/rate", formData);
+      const response = await axios.post(`${apiBaseURL}/api/rate`, formData);
       console.log("Response from server:", response.data);
       onClose(); // Close modal after submission
     } catch (error) {

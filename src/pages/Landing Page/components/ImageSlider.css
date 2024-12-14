@@ -1,0 +1,138 @@
+.wrapper{
+  margin-top: 60px;
+}
+.image-slider-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .image-display__title{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .image-row-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    width: 100%; /* Make the slider responsive by using 100% width */
+    max-width: 1600px; /* Limit the maximum width */
+  }
+  
+  .slider-container {
+    width: 100%; /* Let the container take full width */
+    position: relative;
+    overflow: hidden; /* Hide the scrollbar */
+    scroll-behavior: smooth; /* Smooth scroll */
+  }
+  
+  .slider-container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+  }
+  
+  .image-row-slider__container {
+    display: flex;
+    gap: 20px; /* Space between images */
+  }
+  
+  .image-row-slider__image-card {
+    flex-shrink: 0; /* Prevent image cards from shrinking */
+    padding: 5px;
+  }
+  
+  .image-row-slider__image {
+    width: 300px; /* Image width */
+    height: 600px; /* Image height */
+    padding: 5px;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+  }
+  
+  /* Navigation Buttons */
+  .prev-button, .next-button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: black;
+    font-size: 24px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+    z-index: 10;
+    
+    /* Adding shadow to the button */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+  }
+  
+  .prev-button, .next-button:hover {
+    /* Optional: Add a more prominent shadow on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .prev-button {
+    left: -25px;
+  }
+  
+  .next-button {
+    right: -25px;
+  }
+  
+  .prev-button, .next-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* Tablet and smaller devices */
+  @media (max-width: 768px) {
+    .image-row-slider {
+        width: 80%; /* Make the slider responsive by using 100% width */
+      }
+    
+    .image-row-slider__container {
+      gap: 20px; /* Reduce space between images */
+    }
+  
+    .slider-container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  
+    .prev-button, .next-button {
+      width: 40px; /* Smaller buttons */
+      height: 40px;
+      font-size: 18px;
+    }
+  }
+  
+  /* Mobile screens */
+  @media (max-width: 480px) {
+    .image-row-slider{
+        width: 10%;
+    }
+    .image-row-slider__image {
+      width: 150px; /* Further reduce image width for small screens */
+      height: 300px; /* Adjust height proportionally */
+    }
+  
+    .image-row-slider__container {
+      gap: 10px; /* Further reduce space between images */
+    }
+  
+    .prev-button, .next-button{
+      width: 35px; /* Even smaller buttons */
+      height: 35px;
+      font-size: 16px;
+    }
+  }
+  

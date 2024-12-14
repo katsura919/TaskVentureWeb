@@ -4,13 +4,14 @@ import profileImage from '../../../assets/profile-user.png'
 import './RatingDisplay.css';
 
 const RatingsDisplay = () => {
+  const apiBaseURL = `https://moodyblues-server.onrender.com`;
   const [ratings, setRatings] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchRatings = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/ratings');
+        const response = await axios.get(`${apiBaseURL}/api/ratings`);
         setRatings(response.data);
         setLoading(false);
       } catch (error) {
