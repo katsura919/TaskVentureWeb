@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Overlay */
+.rate-modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Content */
+  .rate-modal__content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    animation: slideIn 0.3s ease-in-out;
+  }
+  
+  /* Modal Title */
+  .rate-modal__title {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Close Button */
+  .rate-modal__close-btn {
+    font-family: "Open Sans", sans-serif;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  /* Form Group */
+  .rate-modal__form-group {
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 15px;
+    text-align: left;
+    
+  }
+  
+  .rate-modal__label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .rate-modal__input,
+  .rate-modal__textarea {
+    width: 96%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .rate-modal__input:focus,
+  .rate-modal__textarea:focus {
+    border-color: #007bff;
+  }
+  
+  /* Rating Stars */
+  .rate-modal__rating-stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .rate-modal__star {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .rate-modal__star--selected {
+    color: #ffc107;
+  }
+  
+  .rate-modal__star:hover {
+    color: #ffb300;
+  }
+  
+  /* Submit Button */
+  .rate-modal__submit-btn {
+    font-family: "Open Sans", sans-serif;
+    display: inline-block;
+    width: 100%;
+    background-color: #28a745;
+    color: #555;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  /* General Button for Opening Modal */
+  .rate-modal__button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .rate-modal__button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Keyframes for Modal Animation */
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

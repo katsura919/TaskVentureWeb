@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './components/Button';
 import Footer from './components/Footer';
+import RatingsDisplay from './components/RatingDisplay';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -37,6 +38,8 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+      
+      <RatingsDisplay/>
       <Footer/>
     </div>
   );

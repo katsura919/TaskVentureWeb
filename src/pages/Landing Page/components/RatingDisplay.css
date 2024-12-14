@@ -1,0 +1,77 @@
+.ratings-display__container {
+    text-align: center;
+    margin: 50px;
+  }
+  
+  .ratings-display__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .ratings-display__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows the cards to wrap if needed */
+    gap: 70px; /* Space between cards */
+  }
+  
+  .ratings-display__card {
+    width: 600px;
+    height: 350px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center contents vertically */
+    align-items: center; /* Center contents horizontally */
+    overflow: hidden;
+  }
+  
+  .ratings-display__profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image scales correctly */
+    margin-bottom: 20px;
+  }
+  .ratings-display__quote {
+    font-style: italic;
+    font-size: 25px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px; /* Space between quote and name */
+  }
+  
+  .ratings-display__card-name {
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 10px; /* Space below name */
+  }
+  
+  .ratings-display__stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Space between stars */
+  }
+  
+  .ratings-display__star {
+    font-size: 30px;
+    color: #ddd; /* Default color for empty stars */
+  }
+  
+  .ratings-display__star--filled {
+    color: #ffc107; /* Gold color for filled stars */
+  }
+  
+  .ratings-display__loading,
+  .ratings-display__no-ratings {
+    font-size: 18px;
+    color: #888;
+  }
+  
