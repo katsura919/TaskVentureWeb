@@ -3,7 +3,7 @@ import axios from "axios";
 import "./RateModal.css";
 
 const RateModal = ({ isOpen, onClose }) => {
-   const apiBaseURL = `https://moodyblues-server.onrender.com`;
+   const apiBaseURL = `https://moodybluesserver.onrender.com`;
   const [formData, setFormData] = useState({
     name: "",
     email: "",

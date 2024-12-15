@@ -4,7 +4,7 @@ import profileImage from '../../../assets/profile-user.png'
 import './RatingDisplay.css';
 
 const RatingsDisplay = () => {
-  const apiBaseURL = `https://moodyblues-server.onrender.com`;
+  const apiBaseURL = `https://moodybluesserver.onrender.com`;
   const [ratings, setRatings] = useState([]);
   const [loading, setLoading] = useState(true);
 
